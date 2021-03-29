@@ -1,6 +1,5 @@
 package com.minhnv.c9nvm.demosharedviewmodels.ex_2.first
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,13 +11,13 @@ import com.minhnv.c9nvm.demosharedviewmodels.ex_2.SharedFgFgActivity
 
 class FirstFragment : Fragment() {
 
-    private val viewModels: FirstViewModel by viewModels()
+    private val viewModels: FirstViewModel by viewModels(ownerProducer = { requireActivity() })
 
     private lateinit var binding : FirstFragmentBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FirstFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -30,7 +29,6 @@ class FirstFragment : Fragment() {
         }
         viewModels.change.observe(viewLifecycleOwner) {
             binding.tvFirst.text = "change to $it"
-            binding.tvFirst.setBackgroundColor(Color.rgb(it, it * 10, it * 100))
         }
     }
 }

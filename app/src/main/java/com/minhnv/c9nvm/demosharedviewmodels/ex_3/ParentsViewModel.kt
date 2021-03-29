@@ -1,10 +1,10 @@
-package com.minhnv.c9nvm.demosharedviewmodels.ex_2.first
+package com.minhnv.c9nvm.demosharedviewmodels.ex_3
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class FirstViewModel : ViewModel() {
+class ParentsViewModel : ViewModel() {
     private val _change: MutableLiveData<Int> = MutableLiveData(1)
     val change: LiveData<Int> get() = _change
 

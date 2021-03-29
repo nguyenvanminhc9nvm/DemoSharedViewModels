@@ -3,22 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".ex_2.first.FirstFragment">
+    android:gravity="center"
+    android:background="@color/teal_200"
+    tools:context=".ex_3.fragment_child.child_2.SecondChildFragment">
 
     <TextView
-        android:id="@+id/tvFirst"
+        android:id="@+id/tvChange2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:textSize="30sp"
         android:text="Hello" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnChange2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="move to second" />
+        android:text="đổi text ở fragment  3"/>
+
+    <Button
+        android:id="@+id/btnChangeParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="đổi text ở fragment cha"/>
 
 </LinearLayout>

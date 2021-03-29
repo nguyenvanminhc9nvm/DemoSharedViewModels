@@ -8,5 +8,7 @@ class SharedParChildFgActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shared_par_child_fg)
+        val parentsFragment = ParentsFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.containerParent, parentsFragment, parentsFragment.tag).commit()
     }
 }

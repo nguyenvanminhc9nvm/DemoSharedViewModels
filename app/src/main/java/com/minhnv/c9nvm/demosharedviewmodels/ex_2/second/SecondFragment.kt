@@ -18,12 +18,12 @@ import kotlin.random.Random
  */
 class SecondFragment : Fragment() {
 
-    private val viewModel: FirstViewModel by viewModels()
+    private val viewModel: FirstViewModel by viewModels(ownerProducer = { requireActivity() })
     private lateinit var binding: FragmentSecondBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding =  FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
