@@ -20,7 +20,7 @@
         android:id="@+id/btnChange2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="đổi text ở fragment  3"/>
+        android:text="đổi text ở tab 3"/>
 
     <Button
         android:id="@+id/btnChangeParent"

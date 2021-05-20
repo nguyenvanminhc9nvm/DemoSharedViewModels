@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#FFEB3B"
     tools:context=".ex_2.second.SecondFragment">
 
     <!-- TODO: Update blank fragment layout -->

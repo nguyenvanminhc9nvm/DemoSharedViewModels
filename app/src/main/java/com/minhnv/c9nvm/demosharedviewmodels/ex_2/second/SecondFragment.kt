@@ -33,6 +33,7 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnChange.setOnClickListener {
             viewModel.setRotate(Random.nextInt(0, 100))
+            requireActivity().onBackPressed()
         }
     }
 }
